@@ -1,85 +1,186 @@
-/* 测试是否生效 */
-body {
-    background-color: red !important;
-}
-
-
 /* =========================
    全局暗黑背景与字体
 ========================= */
-body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+body.dark {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-/* ------------------------
+/* =========================
    首页标题与欢迎文字
-------------------------- */
-.home-title {
+========================= */
+.pagetitle h1 {
     color: #ff6600 !important;
-    font-weight: bold;
+    font-weight: bold !important;
+    font-size: 2.5rem !important;
 }
 
-.home-content {
+.pagetitle p {
     color: #cccccc !important;
+    font-size: 1.1rem !important;
 }
 
-/* ------------------------
+/* =========================
    文章卡片样式
-------------------------- */
-.card {
+========================= */
+.post-card {
     background-color: #1f1f1f !important;
     border-radius: 1rem !important;
-    padding: 1.2rem;
+    padding: 1.2rem !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s !important;
 }
 
-.card:hover {
-    transform: translateY(-4px);
+.post-card:hover {
+    transform: translateY(-4px) !important;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7) !important;
 }
 
-/* ------------------------
+/* =========================
    链接颜色
-------------------------- */
+========================= */
 a, a:visited {
-    color: #ff6600;
-}
-
-a:hover {
-    color: #ffa500;
-}
-
-/* ------------------------
-   菜单和导航栏
-------------------------- */
-.navbar, .menu {
-    background-color: #1b1b1b !important;
-}
-
-.navbar a, .menu a {
-    color: #e0e0e0 !important;
-}
-
-.navbar a:hover, .menu a:hover {
     color: #ff6600 !important;
 }
 
-/* ------------------------
+a:hover {
+    color: #ffa500 !important;
+}
+
+/* =========================
+   导航栏
+========================= */
+.navbar-wrapper {
+    background-color: #1b1b1b !important;
+}
+
+.navbar-wrapper a, .nav-links a {
+    color: #e0e0e0 !important;
+}
+
+.navbar-wrapper a:hover, .nav-links a:hover {
+    color: #ff6600 !important;
+}
+
+/* =========================
    代码块样式
-------------------------- */
-pre, code {
+========================= */
+.highlight, .chroma {
     background-color: #2a2a2a !important;
     color: #f5f5f5 !important;
     border-radius: 0.5rem !important;
+    padding: 0.5rem !important;
+    overflow-x: auto !important;
 }
 
-/* ------------------------
+/* =========================
    面包屑和分页
-------------------------- */
-.breadcrumb, .pagination {
+========================= */
+.breadcrumbs, .pagination-wrapper {
     background-color: transparent !important;
     color: #cccccc !important;
+}
+
+/* =========================
+   按钮样式
+========================= */
+button, .btn, .btn a {
+    background-color: #ff6600 !important;
+    color: #ffffff !important;
+    border-radius: 0.5rem !important;
+    padding: 0.4rem 1rem !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+button:hover, .btn:hover, .btn a:hover {
+    background-color: #ffa500 !important;
+}
+
+/* =========================
+   页脚文字
+========================= */
+.footer {
+    color: #999999 !important;
+    background-color: #1b1b1b !important;
+}
+
+/* =========================
+   表格样式
+========================= */
+table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+}
+
+table th, table td {
+    border: 1px solid #333333 !important;
+    padding: 0.5rem !important;
+    color: #e0e0e0 !important;
+}
+
+table th {
+    background-color: #1f1f1f !important;
+}
+
+/* =========================
+   高亮警告/提示框
+========================= */
+.alert, .notice, .warning {
+    background-color: #333333 !important;
+    color: #ff6600 !important;
+    border-left: 4px solid #ff6600 !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.5rem !important;
+}
+
+/* =========================
+   移动端优化 (Responsive)
+========================= */
+@media (max-width: 768px) {
+
+    /* 首页标题和文字缩小 */
+    .pagetitle h1 {
+        font-size: 2rem !important;
+    }
+
+    .pagetitle p {
+        font-size: 1rem !important;
+    }
+
+    /* 文章卡片内边距缩小 */
+    .post-card {
+        padding: 0.8rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* 导航栏菜单改为纵向显示 */
+    .nav-links {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+
+    /* 按钮更适合小屏幕 */
+    button, .btn, .btn a {
+        padding: 0.3rem 0.8rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* 代码块滚动优化 */
+    .highlight, .chroma {
+        padding: 0.3rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* 表格水平滚动 */
+    table {
+        display: block !important;
+        overflow-x: auto !important;
+    }
+
+    /* 页脚文字缩小 */
+    .footer {
+        font-size: 0.85rem !important;
+    }
 }
