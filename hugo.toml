@@ -1,6 +1,6 @@
 baseURL = "https://amoxicillinnn.github.io/"
 languageCode = "en-us"
-title = "My Industrial Data Blog"
+title = "thing"
 theme = "PaperMod"
 enableRobotsTXT = true
 
@@ -20,8 +20,8 @@ enableThemeSwitch = true
 customCSS = ["css/custom.css"]    # 引入自定义 CSS
 
 [params.homeInfoParams]
-Title = "Welcome to My Industrial Data Blog"
-Content = "This site is built with Hugo + PaperMod. Here I share tutorials and insights on building low-cost, scalable industrial data acquisition and visualization systems. Stay tuned for more posts!"
+Title = "All is well."
+Content = "Rest assured that everything is unfolding as it should, and all is perfectly in its place."
 
 [[menu.main]]
 identifier = "home"
